@@ -1,0 +1,201 @@
+body{
+    margin: 0;
+    background-color: gray;
+}
+
+#outer {
+    width:60%;
+    height: auto;
+    margin:0px auto;
+    background-color: white;
+    margin-top: 7%;
+}
+.container {
+    width:100%;
+    height:65%;
+}
+
+#heading {
+    display:flex;
+    justify-content: center;
+    margin:0px auto;
+    margin-top: 2px;
+    height: 2%;
+}
+
+#desc {
+    width :98%;
+    /* border:1px solid green; */
+    margin:0px auto;
+    height: 45px;
+    padding: 10px;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+}
+
+#desc label {
+    display: block;
+    font-size: 1.1rem;
+}
+#desc input {
+    border: transparent;
+    margin: 2px;
+    padding: 2px;
+    width: 80%;
+    height: 20px;
+    padding: 2px;
+}
+
+#cat-dat {
+    width:99%;
+    height:60px;
+    display: flex;
+    border-bottom: 1px solid gray;
+}
+
+.category {
+    width:50%;
+    padding: 3px;
+    margin-top: 3px;
+    margin-left: 2px;
+    border-right: 1px solid gray;
+}
+.category label {
+    display: block;
+    font-synthesis: 1.1rem;
+}
+
+.category select {
+    border: transparent;
+    padding: 3px;
+    width: 80%;
+}
+
+.date {
+    width:50%;
+    padding: 4px;
+}
+
+.date label {
+    display: block;
+    padding: 3px;
+    font-size: 1.1rem;
+}
+
+.date input {
+    border: transparent;
+    padding: 2px;
+}
+
+.buttons {
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    margin-top: 3px;
+}
+
+#add {
+    margin: 3px 3px;
+    width: 150px;
+    height: 50px;
+    background-color: black;
+    color: white;
+    font-size: 1rem;
+    border: transparent;
+    cursor: pointer;
+}
+
+#add:hover{
+    box-shadow: 0px 0px 3px 3px rgb(85, 75, 75);
+    font-size: 1.1rem;
+    width: 170px;
+}
+
+#add span {
+    margin-right: 4px;
+}
+
+#delete{
+    width:150px;
+    margin: 16px 3px;
+    height: 50px;
+    color: white;
+    font-size: 1rem;
+    border: transparent;  
+    cursor: pointer;  
+    background-color: red;
+}
+#delete:hover{
+    box-shadow: 0px 0px 3px 3px rgb(255, 106, 106);
+    font-size: 1.1rem;
+    width: 170px;
+}
+#delete span {
+    margin-right: 4px;
+}
+
+#display {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.display-inner {
+    border-top: 1px solid grey;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    padding: 10px 2px;
+    
+}
+
+.marker {
+    width: 10%;
+}
+.marker a {
+    text-decoration: none;
+}
+
+.delete-para {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: red;
+    width: 73%;
+    height: 50%;
+    /* background-color: rgb(255, 146, 146); */
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    margin-left: 2px;
+
+}
+
+.tasks {
+    width: 70%;
+    font-size: 1.2rem;
+}
+
+.logo-date {
+    font-size: 0.7em;
+    color: gray;
+}
+
+.categ {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 30px;
+    border-bottom: 2px solid yellowgreen;
+    font-size: 1.1rem;
+    font-weight: bold;
+    font-family: monospace;
+    background-color: lightgreen;
+    border-radius: 20%;
+    margin-top: 7px;
+}
+

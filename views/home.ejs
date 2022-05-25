@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo App</title>
+    <script src="https://kit.fontawesome.com/ad63c45007.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="shortcut icon" href="/img/logo.svg" type="image/x-icon">
+
+</head>
+
+<body>
+    <div id="outer">
+        <div class="container">
+            <h1 id="heading">TODO App</h1>
+            <form action="/create-task" method="POST">
+                <div id="desc">
+                    <label for="description">DESCRIPTION</label>
+                    <input type="text" name="description" placeholder="What do you need to do?">
+                </div>
+                <div id="cat-dat">
+                    <div class="category">
+                        <label for="category">CATEGORY</label>
+                        <select name="category" id="">
+                            <option value="none" selected disabled hidden>Choose a category</option>
+                            <option value="school" id="school">School</option>
+                            <option value="college" id="college">College</option>
+                            <option value="work" id="work">Work</option>
+                            <option value="cleaning" id="cleaning">Cleaning</option>
+                            <option value="home" id="home">Home</option>
+                        </select>
+                    </div>
+                    <div class="date">
+                        <label for="date">DUE DATE</label>
+                        <input type="Date" name="date" id="date">
+                    </div>
+
+                </div>
+                <div class="buttons">
+                    <div class="both">
+                        <button type="submit" id="add" class="button"><span><i class="fa-solid fa-plus"></span></i>ADD
+                            TASK</button>
+                    </div>
+
+                    <div class="both">
+                        <button id="delete" class="button" type="submit" formaction="/delete-task"><span><i
+                                    class="fa-solid fa-trash-can"></i></span></i>
+                            DELETE TASK</button>
+                    </div>
+                </div>
+        </div>
+        </form>
+
+
+        <!-- <form action="/delete-task" method="POST">
+            <div class="both">
+                <button type="submit" id="delete" class="button"><span><i class="fa-solid fa-trash-can"></i></span></i>
+                    DELETE TASK</button>
+            </div>
+        </form> -->
+
+
+
+        <div id="display">
+            <% for(let i of toDo) { %>
+                <div class="display-inner">
+                    <div class="marker">
+                        <input type="checkbox" value="<%= i._id %>" name="check">
+                        <!-- <p class="delete-para">DELETE</p> -->
+                    </div>
+
+                    <div class=" tasks">
+                        <%= i.description %>
+                            <div class="logo-date">
+                                <span>
+                                    <i class="fa-solid fa-calendar-days"></i>
+                                </span>
+                                <span>
+                                    <%= i.date %>
+                                </span>
+                            </div>
+
+                    </div>
+
+                    <div class="categ">
+                        <%= i.category %>
+                    </div>
+                </div>
+
+                <% } %>
+                    <!-- </form> -->
+        </div>
+    </div>
+
+    <script src="/js/home.js"></script>
+
+</body>
+
+</html>
