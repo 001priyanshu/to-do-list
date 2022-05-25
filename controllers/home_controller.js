@@ -29,8 +29,19 @@ module.exports.find = function (req, res) {
 }
 
 module.exports.delete = function (req, res) {
-    let id = req.body.check
-    console.log(id)
+
+    console.log("DEeindsp");
+    console.log(req.body.check);
+    const id=req.body.check;
+    ToDo.findOneAndRemove({id}).then(()=>{
+          return res.redirect('back')
+    })
+   
+}
+module.exports.temp = function (req, res) {
+
+    // let id = req.body.check
+    console.log("Inside temp");
 }
 
 
